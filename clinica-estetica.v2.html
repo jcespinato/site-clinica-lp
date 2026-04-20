@@ -4,10 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Clínica especializada em estética orofacial premium. Harmonização facial, Botox, Preenchimento e mais. Resultados naturais e sofisticados.">
-<meta name="author" content="João Carlos de Souza Espinato"
+<meta name="author" content="João Carlos de Souza Espinato">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#2C2520">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Luciana Pinheiro | Beleza Natural com Sofisticação">
+<meta property="og:description" content="Clínica especializada em estética orofacial premium. Harmonização facial, Botox, Preenchimento e mais.">
+<meta property="og:image" content="principal/solange.png">
+<meta property="og:image:alt" content="Resultado de procedimento de harmonização facial">
+<meta name="twitter:card" content="summary_large_image">
 <title>Luciana Pinheiro | Beleza Natural com Sofisticação</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="%232C2520"/><text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-family="Georgia, serif" font-size="34" fill="%23D4B483">L</text></svg>'>
+<link rel="apple-touch-icon" href="principal/solange.png">
 <style>
   :root {
     --white: #FDFAF6;
@@ -19,17 +31,17 @@
     --charcoal: #2C2520;
     --charcoal-soft: #4A403A;
     --text: #3D3530;
-    --text-light: #7A6E68;
+    --text-light: #5F544D;
     --shadow: rgba(44,37,32,0.08);
     --shadow-md: rgba(44,37,32,0.15);
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; font-size: 17px; }
 
   body {
-    font-family: 'Jost', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 400;
     background: var(--white);
     color: var(--text);
@@ -42,7 +54,7 @@
   h2 { font-size: clamp(2rem, 4vw, 3.4rem); line-height: 1.15; }
   h3 { font-size: clamp(1.4rem, 2.5vw, 2rem); }
   h4 { font-size: 1.3rem; }
-  p { font-size: 1rem; line-height: 1.75; font-weight: 400; color: var(--text-light); }
+  p { font-size: 1.05rem; line-height: 1.75; font-weight: 400; color: var(--text); }
 
   .gold { color: var(--gold); }
   .italic { font-style: italic; }
@@ -78,10 +90,10 @@
     display: flex; gap: 2.5rem; list-style: none;
   }
   .nav-links a {
-    font-family: 'Jost', sans-serif;
-    font-size: 0.78rem;
-    font-weight: 400;
-    letter-spacing: 0.14em;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.86rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--charcoal-soft);
     text-decoration: none;
@@ -95,13 +107,13 @@
     color: var(--gold) !important;
     padding: 0.55rem 1.5rem;
     border-radius: 0;
-    font-size: 0.72rem !important;
-    letter-spacing: 0.16em !important;
+    font-size: 0.8rem !important;
+    letter-spacing: 0.1em !important;
     transition: all 0.3s !important;
   }
   .nav-cta:hover { background: var(--gold) !important; color: var(--white) !important; }
 
-  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: transparent; border: 0; padding: 0; }
   .hamburger span { display: block; width: 24px; height: 1px; background: var(--charcoal); transition: all 0.3s; }
 
   /* HERO */
@@ -140,7 +152,7 @@
   }
 
   .hero-tag {
-    font-size: 0.72rem;
+    font-size: 0.8rem;
     letter-spacing: 0.28em;
     text-transform: uppercase;
     color: var(--gold);
@@ -171,8 +183,8 @@
     background: var(--gold);
     color: var(--white);
     padding: 1rem 2rem;
-    font-family: 'Jost', sans-serif;
-    font-size: 0.78rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.84rem;
     font-weight: 400;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -187,8 +199,8 @@
     background: transparent;
     color: var(--charcoal);
     padding: 1rem 2rem;
-    font-family: 'Jost', sans-serif;
-    font-size: 0.78rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.84rem;
     font-weight: 400;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -199,12 +211,19 @@
   }
   .btn-outline:hover { background: var(--charcoal); color: var(--white); transform: translateY(-2px); }
 
+  a:focus-visible,
+  button:focus-visible,
+  .servico-card:focus-visible,
+  .faq-q:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+  }
+
   .hero-stats {
     display: flex; gap: 2.5rem; margin-top: 3rem;
     padding-top: 2rem;
     border-top: 1px solid var(--nude);
   }
-  .stat-item {}
   .stat-num {
     font-family: 'Cormorant Garamond', serif;
     font-size: 2.4rem;
@@ -214,7 +233,7 @@
   }
   .stat-num span { color: var(--gold); }
   .stat-label {
-    font-size: 0.72rem;
+    font-size: 0.8rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--text-light);
@@ -237,14 +256,15 @@
   }
 
   .hero-img-main {
-    width: 85%;
-    height: 100%;
-    object-fit: cover;
+    width: min(92%, 620px);
+    height: auto;
+    max-height: 640px;
+    object-fit: contain;
+    object-position: center center;
     display: block;
     position: relative;
     z-index: 2;
-    /* Placeholder visual */
-    background: linear-gradient(160deg, #D4B483 0%, #C9B8A8 40%, #B8975A 100%);
+    background: var(--nude);
   }
 
   .hero-img-placeholder {
@@ -297,8 +317,8 @@
   /* SECTIONS SHARED */
   section { padding: 6rem 10%; }
   .section-tag {
-    font-size: 0.7rem;
-    letter-spacing: 0.3em;
+    font-size: 0.78rem;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--gold);
     margin-bottom: 1rem;
@@ -358,7 +378,7 @@
     color: var(--white);
     margin-bottom: 0.8rem;
   }
-  .dif-text { font-size: 0.9rem; line-height: 1.8; color: rgba(255,255,255,0.5); }
+  .dif-text { font-size: 0.96rem; line-height: 1.8; color: rgba(255,255,255,0.75); }
 
   /* SERVIÇOS */
   #servicos { background: var(--white); }
@@ -409,7 +429,7 @@
     color: var(--charcoal);
     margin-bottom: 0.8rem;
   }
-  .servico-desc { font-size: 0.9rem; line-height: 1.75; margin-bottom: 1.5rem; }
+  .servico-desc { font-size: 0.96rem; line-height: 1.75; margin-bottom: 1.5rem; }
   .servico-arrow {
     font-size: 1rem;
     color: var(--nude-dark);
@@ -447,11 +467,10 @@
     object-fit: cover;
     object-position: center top;
     display: block;
-    /* Realce sutil para melhorar definição sem artificialidade */
-    filter: contrast(1.03) saturate(1.02) brightness(1.01);
     transform: none;
     backface-visibility: hidden;
     margin: auto;
+    image-rendering: auto;
   }
 
   .sobre-overlay {
@@ -478,8 +497,8 @@
     display: flex; flex-wrap: wrap; gap: 0.8rem; margin: 2rem 0;
   }
   .cert-badge {
-    font-size: 0.68rem;
-    letter-spacing: 0.12em;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--charcoal-soft);
     border: 1px solid var(--nude-dark);
@@ -508,7 +527,7 @@
     cursor: pointer;
     transition: transform 0.4s;
   }
-  .resultado-card:hover { transform: scale(1.02); }
+  .resultado-card:hover { transform: none; }
 
   .resultado-placeholder {
     height: 320px;
@@ -524,6 +543,7 @@
     object-fit: cover;
     object-position: center;
     display: block;
+    image-rendering: auto;
   }
 
   .antes-depois {
@@ -558,10 +578,10 @@
     font-weight: 400;
   }
   .resultado-info {
-    font-size: 0.72rem;
+    font-size: 0.8rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.5);
+    color: rgba(255,255,255,0.75);
     margin-top: 0.2rem;
   }
 
@@ -586,7 +606,7 @@
 
   .dep-stars {
     color: var(--gold);
-    font-size: 0.9rem;
+    font-size: 1rem;
     letter-spacing: 0.1em;
     margin-bottom: 1.2rem;
   }
@@ -611,14 +631,14 @@
     font-weight: 400;
   }
   .dep-name {
-    font-size: 0.85rem;
-    font-weight: 500;
-    letter-spacing: 0.06em;
+    font-size: 0.92rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
     color: var(--charcoal);
   }
   .dep-proc {
-    font-size: 0.72rem;
-    letter-spacing: 0.1em;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--gold);
     margin-top: 0.2rem;
@@ -679,10 +699,10 @@
     line-height: 1.4;
     margin-bottom: 0.8rem;
   }
-  .blog-excerpt { font-size: 0.85rem; line-height: 1.7; margin-bottom: 1rem; }
+  .blog-excerpt { font-size: 0.95rem; line-height: 1.7; margin-bottom: 1rem; }
   .blog-link {
-    font-size: 0.72rem;
-    letter-spacing: 0.15em;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--charcoal);
     text-decoration: none;
@@ -704,7 +724,6 @@
     align-items: start;
   }
 
-  .contato-info { }
   .info-item {
     display: flex; gap: 1.2rem; align-items: flex-start;
     margin-bottom: 2rem;
@@ -730,28 +749,13 @@
     font-weight: 400;
     color: var(--white);
   }
-  .info-sub { font-size: 0.85rem; color: rgba(255,255,255,0.4); margin-top: 0.2rem; }
+  .info-sub { font-size: 0.92rem; color: rgba(255,255,255,0.7); margin-top: 0.2rem; }
 
-  .social-links {
-    display: flex; gap: 1rem; margin-top: 2rem;
-  }
-  .social-link {
-    width: 44px; height: 44px;
-    border: 1px solid rgba(255,255,255,0.15);
-    display: flex; align-items: center; justify-content: center;
-    color: rgba(255,255,255,0.5);
-    font-size: 1rem;
-    text-decoration: none;
-    transition: all 0.3s;
-  }
-  .social-link:hover { border-color: var(--gold); color: var(--gold); }
-
-  .contato-form { }
   .form-group { margin-bottom: 1.2rem; }
   .form-group label {
     display: block;
-    font-size: 0.65rem;
-    letter-spacing: 0.2em;
+    font-size: 0.76rem;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     color: rgba(255,255,255,0.4);
     margin-bottom: 0.5rem;
@@ -764,8 +768,8 @@
     border: 1px solid rgba(255,255,255,0.1);
     color: var(--white);
     padding: 0.9rem 1.2rem;
-    font-family: 'Jost', sans-serif;
-    font-size: 0.9rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.96rem;
     font-weight: 400;
     transition: border-color 0.3s;
     outline: none;
@@ -811,7 +815,7 @@
   .whatsapp-tooltip {
     background: var(--charcoal);
     color: var(--white);
-    font-size: 0.75rem;
+    font-size: 0.82rem;
     padding: 0.5rem 1rem;
     letter-spacing: 0.06em;
     white-space: nowrap;
@@ -839,8 +843,8 @@
   .footer-logo span { color: var(--gold); }
   .footer-links { display: flex; gap: 2rem; }
   .footer-links a {
-    font-size: 0.7rem;
-    letter-spacing: 0.14em;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     color: rgba(255,255,255,0.3);
     text-decoration: none;
@@ -848,7 +852,7 @@
   }
   .footer-links a:hover { color: var(--gold); }
   .footer-copy {
-    font-size: 0.72rem;
+    font-size: 0.8rem;
     color: rgba(255,255,255,0.2);
     letter-spacing: 0.08em;
   }
@@ -879,7 +883,7 @@
     padding: 2.5rem;
     position: relative;
   }
-  .modal-tag { font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+  .modal-tag { font-size: 0.74rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
   .modal-title { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--white); font-weight: 400; }
   .modal-close {
     position: absolute; top: 1.5rem; right: 1.5rem;
@@ -901,12 +905,12 @@
     padding-bottom: 0.5rem;
     border-bottom: 1px solid var(--nude);
   }
-  .modal-section p { font-size: 0.9rem; }
+  .modal-section p { font-size: 0.96rem; }
 
   .modal-benefits { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; }
   .modal-benefits li {
     background: var(--beige);
-    font-size: 0.78rem;
+    font-size: 0.86rem;
     padding: 0.4rem 0.9rem;
     color: var(--charcoal-soft);
     border-left: 2px solid var(--gold);
@@ -915,7 +919,7 @@
   .faq-item { margin-bottom: 1rem; }
   .faq-q {
     font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 0.96rem;
     color: var(--charcoal);
     cursor: pointer;
     display: flex; align-items: center; justify-content: space-between;
@@ -923,7 +927,7 @@
     border-bottom: 1px solid var(--nude);
   }
   .faq-a {
-    font-size: 0.85rem;
+    font-size: 0.92rem;
     padding: 0.8rem 0 0;
     display: none;
     line-height: 1.8;
@@ -972,7 +976,10 @@
     .hero-btns { justify-content: center; }
     .hero-stats { justify-content: center; }
     .hero-image { height: 400px; padding: 2rem 6%; }
-    .hero-img-placeholder { max-height: 350px; }
+    .hero-img-main {
+      width: min(100%, 420px);
+      max-height: 350px;
+    }
     .hero-img-frame::after { display: none; }
     .floating-badge { bottom: 20px; left: 50%; transform: translateX(-50%); }
 
@@ -993,6 +1000,7 @@
   }
 
   @media (max-width: 640px) {
+    html { font-size: 16px; }
     nav { padding: 1.2rem 5%; }
     .nav-logo { font-size: 1.95rem; }
     .nav-links { display: none; }
@@ -1031,9 +1039,9 @@
     <li><a href="#blog">Blog</a></li>
     <li><a href="#contato" class="nav-cta">Agendar</a></li>
   </ul>
-  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" type="button" aria-label="Abrir ou fechar menu">
     <span></span><span></span><span></span>
-  </div>
+  </button>
 </nav>
 
 <!-- HERO -->
@@ -1044,7 +1052,7 @@
     <h1>Realce sua<br><em>beleza natural</em><br>com harmonia.</h1>
     <p class="hero-sub">Técnicas avançadas, resultados discretos e sofisticados. Sua beleza, amplificada com segurança e naturalidade.</p>
     <div class="hero-btns">
-      <a href="https://wa.me/5527992758222?text=Olá! Gostaria de agendar uma consulta." class="btn-primary" target="_blank">
+      <a href="https://wa.me/55279992758222?text=Olá! Gostaria de agendar uma consulta." class="btn-primary" target="_blank" rel="noopener">
         💬 Agendar Consulta
       </a>
       <a href="#servicos" class="btn-outline">Ver Serviços</a>
@@ -1066,16 +1074,14 @@
   </div>
   <div class="hero-image">
     <div class="hero-img-frame">
-      <div class="hero-img-placeholder">
-        <svg viewBox="0 0 200 260" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <ellipse cx="100" cy="100" rx="55" ry="65" stroke="#B8975A" stroke-width="1.5"/>
-          <path d="M70 160 Q100 220 130 160" stroke="#B8975A" stroke-width="1.5" fill="none"/>
-          <circle cx="100" cy="40" r="18" stroke="#B8975A" stroke-width="1.5"/>
-          <path d="M82 100 Q100 115 118 100" stroke="#B8975A" stroke-width="1" fill="none"/>
-          <circle cx="82" cy="92" r="4" fill="#B8975A" opacity="0.5"/>
-          <circle cx="118" cy="92" r="4" fill="#B8975A" opacity="0.5"/>
-        </svg>
-      </div>
+      <img
+        src="principal/solange.png"
+        alt="Imagem demonstrativa de resultado de harmonização facial"
+        class="hero-img-main"
+        loading="eager"
+        decoding="async"
+        fetchpriority="high"
+      >
       <div class="floating-badge">
         <div class="badge-icon">✦</div>
         <div class="badge-text">Resultado</div>
@@ -1141,37 +1147,37 @@
     </div>
   </div>
   <div class="servicos-grid">
-    <div class="servico-card reveal" onclick="openModal('harmonizacao')">
+    <div class="servico-card reveal" onclick="openModal('harmonizacao')" onkeydown="handleCardKeydown(event, 'harmonizacao')" role="button" tabindex="0" aria-label="Abrir detalhes de Harmonização Facial">
       <div class="servico-icon">◈</div>
       <div class="servico-name">Harmonização<br>Facial</div>
       <p class="servico-desc">Conjunto de procedimentos que equilibram as proporções do rosto, realçando traços naturais com elegância.</p>
       <span class="servico-arrow">→</span>
     </div>
-    <div class="servico-card reveal" onclick="openModal('botox')">
+    <div class="servico-card reveal" onclick="openModal('botox')" onkeydown="handleCardKeydown(event, 'botox')" role="button" tabindex="0" aria-label="Abrir detalhes de Botox Facial">
       <div class="servico-icon">✦</div>
       <div class="servico-name">Botox<br>Facial</div>
       <p class="servico-desc">Suaviza linhas de expressão e rugas com precisão cirúrgica, preservando expressividade natural.</p>
       <span class="servico-arrow">→</span>
     </div>
-    <div class="servico-card reveal" onclick="openModal('preenchimento')">
+    <div class="servico-card reveal" onclick="openModal('preenchimento')" onkeydown="handleCardKeydown(event, 'preenchimento')" role="button" tabindex="0" aria-label="Abrir detalhes de Preenchimento Facial">
       <div class="servico-icon">◉</div>
       <div class="servico-name">Preenchimento<br>Facial</div>
       <p class="servico-desc">Restaura volume e contornos com ácido hialurônico para um resultado jovial e natural.</p>
       <span class="servico-arrow">→</span>
     </div>
-    <div class="servico-card reveal" onclick="openModal('labial')">
+    <div class="servico-card reveal" onclick="openModal('labial')" onkeydown="handleCardKeydown(event, 'labial')" role="button" tabindex="0" aria-label="Abrir detalhes de Contorno Labial">
       <div class="servico-icon">◇</div>
       <div class="servico-name">Contorno<br>Labial</div>
       <p class="servico-desc">Define e volumiza os lábios com técnica especializada para um resultado harmonioso e sedutor.</p>
       <span class="servico-arrow">→</span>
     </div>
-    <div class="servico-card reveal" onclick="openModal('skinbooster')">
+    <div class="servico-card reveal" onclick="openModal('skinbooster')" onkeydown="handleCardKeydown(event, 'skinbooster')" role="button" tabindex="0" aria-label="Abrir detalhes de Skinbooster">
       <div class="servico-icon">●</div>
       <div class="servico-name">Skinbooster<br>& Hidratação</div>
       <p class="servico-desc">Hidratação profunda da pele com ácido hialurônico para luminosidade e vitalidade únicas.</p>
       <span class="servico-arrow">→</span>
     </div>
-    <div class="servico-card reveal" onclick="openModal('bioestimulador')">
+    <div class="servico-card reveal" onclick="openModal('bioestimulador')" onkeydown="handleCardKeydown(event, 'bioestimulador')" role="button" tabindex="0" aria-label="Abrir detalhes de Bioestimuladores de Colágeno">
       <div class="servico-icon">⬡</div>
       <div class="servico-name">Bioestimuladores<br>de Colágeno</div>
       <p class="servico-desc">Estimula a produção natural de colágeno para firmeza e rejuvenescimento progressivo e duradouro.</p>
@@ -1204,7 +1210,7 @@
     <div class="sobre-certs">
       <span class="cert-badge">CFO 6276-ES</span>
       <span class="cert-badge">Pós-grad. Harmonização Facial</span>
-      <span class="cert-badge">Procolo Full face</span>
+      <span class="cert-badge">Protocolo Full face</span>
       <span class="cert-badge">Beleza com elegância</span>
     </div>
     <a href="#contato" class="btn-primary" style="align-self:flex-start; margin-top:1rem;">Conhecer a Clínica</a>
@@ -1261,7 +1267,7 @@
     <div class="depoimento-card reveal">
       <div class="dep-quote-mark">"</div>
       <div class="dep-stars">★★★★★</div>
-      <p class="dep-text">Me olhei no espelho pela primeira vez em anos e me reconheci. A Dra. Sofia entendeu exatamente o que eu precisava.</p>
+      <p class="dep-text">Me olhei no espelho pela primeira vez em anos e me reconheci. A Dra. Luciana entendeu exatamente o que eu precisava.</p>
       <div class="dep-author">
         <div class="dep-avatar">A</div>
         <div>
@@ -1308,7 +1314,7 @@
         <div class="blog-cat">Botox</div>
         <div class="blog-title">Quanto tempo dura o Botox? Tudo o que você precisa saber</div>
         <p class="blog-excerpt">Entenda a duração, fatores que influenciam e quando agendar a sua aplicação de reforço.</p>
-        <a href="#" class="blog-link">Ler artigo →</a>
+        <a href="#contato" class="blog-link">Ler artigo →</a>
       </div>
     </div>
     <div class="blog-card reveal">
@@ -1317,7 +1323,7 @@
         <div class="blog-cat">Segurança</div>
         <div class="blog-title">Preenchimento facial é seguro? Mitos e verdades</div>
         <p class="blog-excerpt">Desmistificamos os principais medos e apresentamos a ciência por trás do procedimento.</p>
-        <a href="#" class="blog-link">Ler artigo →</a>
+        <a href="#contato" class="blog-link">Ler artigo →</a>
       </div>
     </div>
     <div class="blog-card reveal">
@@ -1326,7 +1332,7 @@
         <div class="blog-cat">Harmonização</div>
         <div class="blog-title">O que é harmonização facial e como funciona?</div>
         <p class="blog-excerpt">Um guia completo sobre o procedimento mais procurado da estética orofacial moderna.</p>
-        <a href="#" class="blog-link">Ler artigo →</a>
+        <a href="#contato" class="blog-link">Ler artigo →</a>
       </div>
     </div>
     <div class="blog-card reveal">
@@ -1335,7 +1341,7 @@
         <div class="blog-cat">Investimento</div>
         <div class="blog-title">Quanto custa a harmonização facial? Entenda os valores</div>
         <p class="blog-excerpt">Transparência sobre investimento, o que está incluso e por que a qualidade faz diferença.</p>
-        <a href="#" class="blog-link">Ler artigo →</a>
+        <a href="#contato" class="blog-link">Ler artigo →</a>
       </div>
     </div>
   </div>
@@ -1380,25 +1386,19 @@
           <div class="info-sub">Acompanhe resultados e novidades</div>
         </div>
       </div>
-      <div class="social-links">
-        <a href="#" class="social-link" title="Instagram">📸</a>
-        <a href="#" class="social-link" title="WhatsApp">💬</a>
-        <a href="#" class="social-link" title="YouTube">▶</a>
-        <a href="#" class="social-link" title="TikTok">♪</a>
-      </div>
     </div>
     <div class="contato-form">
       <div class="form-group">
-        <label>Nome completo</label>
-        <input type="text" placeholder="Seu nome">
+        <label for="leadName">Nome completo</label>
+        <input id="leadName" name="name" type="text" placeholder="Seu nome" autocomplete="name" required>
       </div>
       <div class="form-group">
-        <label>WhatsApp</label>
-        <input type="tel" placeholder="(27) 9 0000-0000">
+        <label for="leadPhone">WhatsApp</label>
+        <input id="leadPhone" name="phone" type="tel" placeholder="(27) 9 0000-0000" autocomplete="tel" inputmode="tel" required>
       </div>
       <div class="form-group">
-        <label>Serviço de interesse</label>
-        <select>
+        <label for="leadService">Serviço de interesse</label>
+        <select id="leadService" name="service">
           <option value="">Selecione um procedimento</option>
           <option>Harmonização Facial</option>
           <option>Botox Facial</option>
@@ -1410,8 +1410,8 @@
         </select>
       </div>
       <div class="form-group">
-        <label>Mensagem (opcional)</label>
-        <textarea placeholder="Conte-nos mais sobre seus objetivos..."></textarea>
+        <label for="leadMessage">Mensagem (opcional)</label>
+        <textarea id="leadMessage" name="message" placeholder="Conte-nos mais sobre seus objetivos..."></textarea>
       </div>
       <button class="btn-primary" style="width:100%;justify-content:center;" onclick="submitForm()">
         Solicitar Agendamento →
@@ -1432,7 +1432,7 @@
     <a href="#servicos">Serviços</a>
     <a href="#resultados">Resultados</a>
     <a href="#contato">Contato</a>
-    <a href="#">Política de Privacidade</a>
+    <a href="#contato">Política de Privacidade</a>
   </div>
   <div class="footer-copy">© 2026 Luciana Pinheiro. Todos os direitos reservados.</div>
 </footer>
@@ -1474,6 +1474,13 @@ window.addEventListener('scroll', () => {
 // HAMBURGER
 function toggleMenu() {
   document.getElementById('navLinks').classList.toggle('open');
+}
+
+function handleCardKeydown(event, key) {
+  if (event.key === 'Enter' || event.key === ' ') {
+    event.preventDefault();
+    openModal(key);
+  }
 }
 
 // REVEAL ON SCROLL
@@ -1600,7 +1607,7 @@ function openModal(key) {
       `).join('')}
     </div>
     <div class="modal-cta">
-      <a href="https://wa.me/5528992758222?text=Olá! Tenho interesse em ${encodeURIComponent(s.title)}. Gostaria de agendar uma consulta." class="btn-primary" target="_blank" style="display:inline-flex;justify-content:center;">
+      <a href="https://wa.me/55279992758222?text=Olá! Tenho interesse em ${encodeURIComponent(s.title)}. Gostaria de agendar uma consulta." class="btn-primary" target="_blank" rel="noopener" style="display:inline-flex;justify-content:center;">
         💬 Agendar ${s.title}
       </a>
     </div>
@@ -1624,12 +1631,13 @@ function closeModalDirect() {
 
 // FORM SUBMIT
 function submitForm() {
-  const name = document.querySelector('input[type="text"]').value;
-  const phone = document.querySelector('input[type="tel"]').value;
-  const service = document.querySelector('select').value;
+  const name = document.getElementById('leadName').value.trim();
+  const phone = document.getElementById('leadPhone').value.trim();
+  const service = document.getElementById('leadService').value;
+  const note = document.getElementById('leadMessage').value.trim();
   if (!name || !phone) { alert('Por favor, preencha nome e WhatsApp.'); return; }
-  const msg = `Olá! Me chamo ${name}. Vi o site e gostaria de agendar uma consulta${service ? ' para ' + service : ''}. Meu WhatsApp é ${phone}.`;
-  window.open(`https://wa.me/5528992758222?text=${encodeURIComponent(msg)}`, '_blank');
+  const msg = `Olá! Me chamo ${name}. Vi o site e gostaria de agendar uma consulta${service ? ' para ' + service : ''}. Meu WhatsApp é ${phone}.${note ? ` Mensagem: ${note}` : ''}`;
+  window.open(`https://wa.me/55279992758222?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
 }
 
 // SMOOTH SCROLL FOR NAV
@@ -1641,6 +1649,12 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
     document.getElementById('navLinks').classList.remove('open');
   });
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && document.getElementById('modalOverlay').classList.contains('open')) {
+    closeModalDirect();
+  }
 });
 </script>
 </body>
