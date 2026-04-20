@@ -1,0 +1,1647 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Clínica especializada em estética orofacial premium. Harmonização facial, Botox, Preenchimento e mais. Resultados naturais e sofisticados.">
+<meta name="author" content="João Carlos de Souza Espinato"
+<title>Luciana Pinheiro | Beleza Natural com Sofisticação</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --white: #FDFAF6;
+    --nude: #E8DDD1;
+    --nude-dark: #C9B8A8;
+    --beige: #F5EDE3;
+    --gold: #B8975A;
+    --gold-light: #D4B483;
+    --charcoal: #2C2520;
+    --charcoal-soft: #4A403A;
+    --text: #3D3530;
+    --text-light: #7A6E68;
+    --shadow: rgba(44,37,32,0.08);
+    --shadow-md: rgba(44,37,32,0.15);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    background: var(--white);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* TYPOGRAPHY */
+  h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
+  h1 { font-size: clamp(2.8rem, 6vw, 5.2rem); line-height: 1.08; }
+  h2 { font-size: clamp(2rem, 4vw, 3.4rem); line-height: 1.15; }
+  h3 { font-size: clamp(1.4rem, 2.5vw, 2rem); }
+  h4 { font-size: 1.3rem; }
+  p { font-size: 1rem; line-height: 1.75; font-weight: 400; color: var(--text-light); }
+
+  .gold { color: var(--gold); }
+  .italic { font-style: italic; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; width: 100%; z-index: 100;
+    padding: 1.4rem 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(253,250,246,0.92);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(184,151,90,0.18);
+    transition: all 0.4s ease;
+  }
+
+  nav.scrolled {
+    padding: 0.9rem 5%;
+    box-shadow: 0 4px 30px var(--shadow);
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.35rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: var(--charcoal);
+    text-decoration: none;
+    line-height: 1;
+  }
+  .nav-logo span { color: var(--gold); }
+
+  .nav-links {
+    display: flex; gap: 2.5rem; list-style: none;
+  }
+  .nav-links a {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--charcoal-soft);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+
+  .nav-cta {
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold) !important;
+    padding: 0.55rem 1.5rem;
+    border-radius: 0;
+    font-size: 0.72rem !important;
+    letter-spacing: 0.16em !important;
+    transition: all 0.3s !important;
+  }
+  .nav-cta:hover { background: var(--gold) !important; color: var(--white) !important; }
+
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .hamburger span { display: block; width: 24px; height: 1px; background: var(--charcoal); transition: all 0.3s; }
+
+  /* HERO */
+  #home {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding-top: 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-bg-accent {
+    position: absolute;
+    top: 0; right: 0;
+    width: 55%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--beige) 0%, var(--nude) 100%);
+    z-index: 0;
+  }
+
+  .hero-bg-accent::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -60px;
+    width: 120px; height: 100%;
+    background: var(--white);
+    transform: skewX(-4deg);
+  }
+
+  .hero-content {
+    padding: 4rem 5% 4rem 10%;
+    position: relative; z-index: 1;
+    animation: fadeUp 1s ease both;
+  }
+
+  .hero-tag {
+    font-size: 0.72rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.8rem;
+    display: flex; align-items: center; gap: 1rem;
+  }
+  .hero-tag::before {
+    content: '';
+    display: block;
+    width: 40px; height: 1px;
+    background: var(--gold);
+  }
+
+  .hero-content h1 { color: var(--charcoal); margin-bottom: 1.5rem; }
+  .hero-content h1 em { font-style: italic; color: var(--gold); }
+
+  .hero-sub {
+    font-size: 1.05rem;
+    max-width: 440px;
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+  }
+
+  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    background: var(--gold);
+    color: var(--white);
+    padding: 1rem 2rem;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none; cursor: pointer;
+    transition: all 0.35s;
+  }
+  .btn-primary:hover { background: var(--charcoal); transform: translateY(-2px); box-shadow: 0 8px 24px var(--shadow-md); }
+
+  .btn-outline {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    background: transparent;
+    color: var(--charcoal);
+    padding: 1rem 2rem;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid var(--charcoal);
+    cursor: pointer;
+    transition: all 0.35s;
+  }
+  .btn-outline:hover { background: var(--charcoal); color: var(--white); transform: translateY(-2px); }
+
+  .hero-stats {
+    display: flex; gap: 2.5rem; margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--nude);
+  }
+  .stat-item {}
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: var(--charcoal);
+    line-height: 1;
+  }
+  .stat-num span { color: var(--gold); }
+  .stat-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-top: 0.3rem;
+  }
+
+  .hero-image {
+    position: relative; z-index: 1;
+    height: 85vh;
+    display: flex; align-items: center; justify-content: center;
+    padding: 4rem 8% 4rem 4%;
+    animation: fadeIn 1.2s ease both 0.3s;
+  }
+
+  .hero-img-frame {
+    width: 100%;
+    height: 100%;
+    max-height: 680px;
+    position: relative;
+  }
+
+  .hero-img-main {
+    width: 85%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    z-index: 2;
+    /* Placeholder visual */
+    background: linear-gradient(160deg, #D4B483 0%, #C9B8A8 40%, #B8975A 100%);
+  }
+
+  .hero-img-placeholder {
+    width: 85%;
+    height: 100%;
+    max-height: 680px;
+    background: linear-gradient(160deg, #E8DDD1 0%, #D4C4B4 50%, #C9B8A8 100%);
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .hero-img-placeholder svg {
+    width: 60%;
+    opacity: 0.25;
+  }
+
+  .hero-img-frame::after {
+    content: '';
+    position: absolute;
+    bottom: -20px; right: -20px;
+    width: 85%;
+    height: 100%;
+    border: 1px solid var(--gold);
+    z-index: 1;
+  }
+
+  .floating-badge {
+    position: absolute;
+    bottom: 60px; left: -30px;
+    background: var(--white);
+    padding: 1.2rem 1.5rem;
+    box-shadow: 0 8px 40px var(--shadow-md);
+    z-index: 5;
+    min-width: 170px;
+    animation: float 4s ease-in-out infinite;
+  }
+  .floating-badge .badge-icon { font-size: 1.4rem; margin-bottom: 0.3rem; }
+  .floating-badge .badge-text { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); }
+  .floating-badge .badge-val {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    color: var(--charcoal);
+    font-weight: 400;
+  }
+
+  /* SECTIONS SHARED */
+  section { padding: 6rem 10%; }
+  .section-tag {
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    display: flex; align-items: center; gap: 0.8rem;
+  }
+  .section-tag::before { content: ''; width: 30px; height: 1px; background: var(--gold); }
+
+  .section-title { color: var(--charcoal); margin-bottom: 1rem; }
+  .section-subtitle { max-width: 520px; margin-bottom: 3.5rem; }
+
+  /* DIFERENCIAIS */
+  #diferenciais { background: var(--charcoal); }
+  #diferenciais .section-tag { color: var(--gold-light); }
+  #diferenciais .section-tag::before { background: var(--gold-light); }
+  #diferenciais .section-title { color: var(--white); }
+  #diferenciais p { color: rgba(255,255,255,0.5); }
+
+  .diferenciais-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin-top: 3rem;
+  }
+
+  .diferencial-item {
+    padding: 3rem 2.5rem;
+    border-right: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    transition: background 0.4s;
+    position: relative;
+    overflow: hidden;
+  }
+  .diferencial-item::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px; height: 0;
+    background: var(--gold);
+    transition: height 0.5s;
+  }
+  .diferencial-item:hover::before { height: 100%; }
+  .diferencial-item:hover { background: rgba(255,255,255,0.03); }
+
+  .dif-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    font-weight: 400;
+    color: rgba(184,151,90,0.18);
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  .dif-icon { font-size: 1.8rem; margin-bottom: 1rem; }
+  .dif-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 0.8rem;
+  }
+  .dif-text { font-size: 0.9rem; line-height: 1.8; color: rgba(255,255,255,0.5); }
+
+  /* SERVIÇOS */
+  #servicos { background: var(--white); }
+
+  .servicos-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: end;
+    margin-bottom: 4rem;
+  }
+  .servicos-intro-right { text-align: right; }
+  .servicos-intro-right p { margin-left: auto; }
+
+  .servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5px;
+    background: var(--nude);
+  }
+
+  .servico-card {
+    background: var(--white);
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s;
+  }
+
+  .servico-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0; height: 2px;
+    background: var(--gold);
+    transition: width 0.5s;
+  }
+  .servico-card:hover::after { width: 100%; }
+  .servico-card:hover { background: var(--beige); transform: translateY(-3px); }
+  .servico-card:hover .servico-arrow { transform: translateX(6px); color: var(--gold); }
+
+  .servico-icon { font-size: 2rem; margin-bottom: 1.2rem; }
+  .servico-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--charcoal);
+    margin-bottom: 0.8rem;
+  }
+  .servico-desc { font-size: 0.9rem; line-height: 1.75; margin-bottom: 1.5rem; }
+  .servico-arrow {
+    font-size: 1rem;
+    color: var(--nude-dark);
+    transition: all 0.3s;
+    display: inline-block;
+  }
+
+  /* SOBRE */
+  #sobre {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding: 0;
+    align-items: stretch;
+  }
+
+  .sobre-image {
+    background: linear-gradient(160deg, var(--nude) 0%, var(--nude-dark) 100%);
+    min-height: 600px;
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+
+  .sobre-img-placeholder {
+    width: 100%; height: 100%;
+    position: absolute;
+    background: linear-gradient(160deg, #E8DDD1 0%, #D4C4B4 50%, #C9B8A8 100%);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .sobre-img-placeholder svg { width: 40%; opacity: 0.15; }
+  .sobre-img-placeholder img {
+    width: 92%;
+    height: 92%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    /* Realce sutil para melhorar definição sem artificialidade */
+    filter: contrast(1.03) saturate(1.02) brightness(1.01);
+    transform: none;
+    backface-visibility: hidden;
+    margin: auto;
+  }
+
+  .sobre-overlay {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(transparent, rgba(44,37,32,0.7));
+    padding: 3rem 2.5rem 2.5rem;
+  }
+  .sobre-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--white);
+    line-height: 1.6;
+  }
+
+  .sobre-content {
+    padding: 6rem 8% 6rem 5%;
+    display: flex; flex-direction: column; justify-content: center;
+    background: var(--beige);
+  }
+
+  .sobre-certs {
+    display: flex; flex-wrap: wrap; gap: 0.8rem; margin: 2rem 0;
+  }
+  .cert-badge {
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--charcoal-soft);
+    border: 1px solid var(--nude-dark);
+    padding: 0.4rem 1rem;
+    background: var(--white);
+  }
+
+  /* RESULTADOS */
+  #resultados { background: var(--charcoal); padding: 6rem 10%; }
+  #resultados .section-title { color: var(--white); }
+  #resultados .section-tag { color: var(--gold-light); }
+  #resultados .section-tag::before { background: var(--gold-light); }
+  #resultados p { color: rgba(255,255,255,0.5); }
+
+  .resultados-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+
+  .resultado-card {
+    position: relative;
+    overflow: hidden;
+    background: rgba(255,255,255,0.05);
+    cursor: pointer;
+    transition: transform 0.4s;
+  }
+  .resultado-card:hover { transform: scale(1.02); }
+
+  .resultado-placeholder {
+    height: 320px;
+    background: linear-gradient(135deg, rgba(184,151,90,0.15), rgba(201,184,168,0.15));
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 1rem;
+    position: relative;
+  }
+  .resultado-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  .antes-depois {
+    display: flex; width: 100%; height: 100%;
+    position: relative;
+  }
+
+  .antes-depois-label {
+    position: absolute;
+    top: 1rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--white);
+    background: rgba(0,0,0,0.4);
+    padding: 0.3rem 0.7rem;
+    z-index: 2;
+  }
+  .antes-depois-label.antes { left: 0.7rem; }
+  .antes-depois-label.depois { right: 0.7rem; }
+
+  .resultado-label {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(transparent, rgba(44,37,32,0.85));
+    padding: 2rem 1.5rem 1.2rem;
+  }
+  .resultado-proc {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    color: var(--white);
+    font-weight: 400;
+  }
+  .resultado-info {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-top: 0.2rem;
+  }
+
+  /* DEPOIMENTOS */
+  #depoimentos { background: var(--beige); }
+
+  .depoimentos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .depoimento-card {
+    background: var(--white);
+    padding: 2.5rem;
+    position: relative;
+    box-shadow: 0 4px 24px var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .depoimento-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px var(--shadow-md); }
+
+  .dep-stars {
+    color: var(--gold);
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.2rem;
+  }
+  .dep-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-style: italic;
+    color: var(--charcoal);
+    line-height: 1.7;
+    margin-bottom: 1.8rem;
+    font-weight: 400;
+  }
+  .dep-author { display: flex; align-items: center; gap: 1rem; }
+  .dep-avatar {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--nude), var(--nude-dark));
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    color: var(--charcoal);
+    font-weight: 400;
+  }
+  .dep-name {
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    color: var(--charcoal);
+  }
+  .dep-proc {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-top: 0.2rem;
+  }
+
+  .dep-quote-mark {
+    position: absolute;
+    top: 1.5rem; right: 2rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5rem;
+    color: var(--nude);
+    line-height: 1;
+    font-weight: 400;
+    pointer-events: none;
+  }
+
+  /* BLOG */
+  #blog { background: var(--white); }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .blog-card {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 0;
+    background: var(--beige);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  .blog-card:hover { transform: translateY(-3px); }
+  .blog-card:hover .blog-link { color: var(--gold); }
+
+  .blog-img {
+    height: 180px;
+    background: linear-gradient(135deg, var(--nude), var(--nude-dark));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2rem;
+  }
+  .blog-content { padding: 1.8rem; }
+  .blog-cat {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.6rem;
+  }
+  .blog-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--charcoal);
+    line-height: 1.4;
+    margin-bottom: 0.8rem;
+  }
+  .blog-excerpt { font-size: 0.85rem; line-height: 1.7; margin-bottom: 1rem; }
+  .blog-link {
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--charcoal);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  /* CONTATO */
+  #contato { background: var(--charcoal); padding: 6rem 10%; }
+  #contato .section-title { color: var(--white); }
+  #contato .section-tag { color: var(--gold-light); }
+  #contato .section-tag::before { background: var(--gold-light); }
+  #contato p { color: rgba(255,255,255,0.5); }
+
+  .contato-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    margin-top: 3rem;
+    align-items: start;
+  }
+
+  .contato-info { }
+  .info-item {
+    display: flex; gap: 1.2rem; align-items: flex-start;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .info-icon {
+    font-size: 1.2rem;
+    color: var(--gold);
+    margin-top: 0.1rem;
+    flex-shrink: 0;
+  }
+  .info-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.3rem;
+  }
+  .info-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--white);
+  }
+  .info-sub { font-size: 0.85rem; color: rgba(255,255,255,0.4); margin-top: 0.2rem; }
+
+  .social-links {
+    display: flex; gap: 1rem; margin-top: 2rem;
+  }
+  .social-link {
+    width: 44px; height: 44px;
+    border: 1px solid rgba(255,255,255,0.15);
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,0.5);
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  .social-link:hover { border-color: var(--gold); color: var(--gold); }
+
+  .contato-form { }
+  .form-group { margin-bottom: 1.2rem; }
+  .form-group label {
+    display: block;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 0.5rem;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--white);
+    padding: 0.9rem 1.2rem;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    transition: border-color 0.3s;
+    outline: none;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--gold); }
+  .form-group select option { background: var(--charcoal); }
+  .form-group textarea { height: 100px; resize: none; }
+
+  /* WHATSAPP FLOAT */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 2rem; right: 2rem;
+    z-index: 999;
+    display: flex; flex-direction: column; align-items: flex-end; gap: 0.5rem;
+  }
+  .whatsapp-btn {
+    width: 58px; height: 58px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 6px 24px rgba(37,211,102,0.4);
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: pulse-green 2.5s ease-in-out infinite;
+  }
+  .whatsapp-btn:hover { transform: scale(1.1); box-shadow: 0 10px 32px rgba(37,211,102,0.6); }
+  .whatsapp-btn svg { width: 28px; height: 28px; fill: white; }
+
+  .instagram-btn {
+    width: 58px; height: 58px;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 6px 24px rgba(214,36,159,0.35);
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .instagram-btn:hover { transform: scale(1.1); box-shadow: 0 10px 32px rgba(214,36,159,0.55); }
+  .instagram-btn svg { width: 28px; height: 28px; fill: white; }
+
+  .whatsapp-tooltip {
+    background: var(--charcoal);
+    color: var(--white);
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: all 0.3s;
+    pointer-events: none;
+  }
+  .whatsapp-float:hover .whatsapp-tooltip { opacity: 1; transform: translateX(0); }
+
+  /* FOOTER */
+  footer {
+    background: #1a1410;
+    padding: 3rem 10%;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 1.5rem;
+  }
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    color: rgba(255,255,255,0.4);
+    font-weight: 400;
+    letter-spacing: 0.08em;
+  }
+  .footer-logo span { color: var(--gold); }
+  .footer-links { display: flex; gap: 2rem; }
+  .footer-links a {
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .footer-links a:hover { color: var(--gold); }
+  .footer-copy {
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.2);
+    letter-spacing: 0.08em;
+  }
+
+  /* MODAL SERVIÇOS */
+  .modal-overlay {
+    display: none;
+    position: fixed; inset: 0;
+    background: rgba(44,37,32,0.85);
+    z-index: 500;
+    align-items: center; justify-content: center;
+    padding: 2rem;
+  }
+  .modal-overlay.open { display: flex; }
+
+  .modal {
+    background: var(--white);
+    max-width: 680px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+    animation: modalIn 0.4s ease;
+  }
+
+  .modal-header {
+    background: var(--charcoal);
+    padding: 2.5rem;
+    position: relative;
+  }
+  .modal-tag { font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+  .modal-title { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--white); font-weight: 400; }
+  .modal-close {
+    position: absolute; top: 1.5rem; right: 1.5rem;
+    background: none; border: none;
+    color: rgba(255,255,255,0.5);
+    font-size: 1.5rem; cursor: pointer;
+    transition: color 0.3s;
+  }
+  .modal-close:hover { color: var(--white); }
+
+  .modal-body { padding: 2.5rem; }
+  .modal-section { margin-bottom: 2rem; }
+  .modal-section h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    color: var(--charcoal);
+    font-weight: 400;
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--nude);
+  }
+  .modal-section p { font-size: 0.9rem; }
+
+  .modal-benefits { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .modal-benefits li {
+    background: var(--beige);
+    font-size: 0.78rem;
+    padding: 0.4rem 0.9rem;
+    color: var(--charcoal-soft);
+    border-left: 2px solid var(--gold);
+  }
+
+  .faq-item { margin-bottom: 1rem; }
+  .faq-q {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--charcoal);
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--nude);
+  }
+  .faq-a {
+    font-size: 0.85rem;
+    padding: 0.8rem 0 0;
+    display: none;
+    line-height: 1.8;
+  }
+  .faq-a.open { display: block; }
+
+  .modal-cta { margin-top: 2rem; text-align: center; }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; } to { opacity: 1; }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  @keyframes pulse-green {
+    0%, 100% { box-shadow: 0 6px 24px rgba(37,211,102,0.4); }
+    50% { box-shadow: 0 6px 40px rgba(37,211,102,0.7); }
+  }
+  @keyframes modalIn {
+    from { opacity: 0; transform: scale(0.95) translateY(20px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  /* MOBILE */
+  @media (max-width: 1024px) {
+    section { padding: 5rem 6%; }
+    #home { grid-template-columns: 1fr; padding-top: 80px; }
+    .hero-bg-accent { width: 100%; height: 50%; top: auto; bottom: 0; }
+    .hero-bg-accent::before { display: none; }
+    .hero-content { padding: 4rem 6% 2rem; text-align: center; }
+    .hero-tag { justify-content: center; }
+    .hero-sub { max-width: 100%; }
+    .hero-btns { justify-content: center; }
+    .hero-stats { justify-content: center; }
+    .hero-image { height: 400px; padding: 2rem 6%; }
+    .hero-img-placeholder { max-height: 350px; }
+    .hero-img-frame::after { display: none; }
+    .floating-badge { bottom: 20px; left: 50%; transform: translateX(-50%); }
+
+    .diferenciais-grid { grid-template-columns: 1fr 1fr; }
+    .servicos-grid { grid-template-columns: 1fr 1fr; }
+    .servicos-intro { grid-template-columns: 1fr; gap: 1rem; }
+    .servicos-intro-right { text-align: left; }
+
+    #sobre { grid-template-columns: 1fr; }
+    .sobre-image { min-height: 350px; }
+
+    .resultados-grid { grid-template-columns: 1fr 1fr; }
+    .depoimentos-grid { grid-template-columns: 1fr 1fr; }
+    .blog-grid { grid-template-columns: 1fr; }
+    .contato-grid { grid-template-columns: 1fr; gap: 3rem; }
+    footer { flex-direction: column; text-align: center; }
+    .footer-links { flex-wrap: wrap; justify-content: center; }
+  }
+
+  @media (max-width: 640px) {
+    nav { padding: 1.2rem 5%; }
+    .nav-logo { font-size: 1.95rem; }
+    .nav-links { display: none; }
+    .nav-links.open {
+      display: flex; flex-direction: column;
+      position: fixed; top: 60px; left: 0; right: 0;
+      background: var(--white);
+      padding: 2rem;
+      gap: 1.5rem;
+      border-bottom: 1px solid var(--nude);
+      z-index: 99;
+    }
+    .hamburger { display: flex; }
+    section { padding: 4rem 5%; }
+    .diferenciais-grid { grid-template-columns: 1fr; }
+    .servicos-grid { grid-template-columns: 1fr; }
+    .resultados-grid { grid-template-columns: 1fr; }
+    .depoimentos-grid { grid-template-columns: 1fr; }
+    .blog-card { grid-template-columns: 1fr; }
+    .blog-img { height: 140px; }
+    .hero-stats { flex-direction: column; gap: 1.5rem; align-items: center; }
+    #contato { padding: 4rem 5%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="#home" class="nav-logo">Luciana <span>Pinheiro</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#resultados">Resultados</a></li>
+    <li><a href="#depoimentos">Depoimentos</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#contato" class="nav-cta">Agendar</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-bg-accent"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Odontologia/Harmonização Facial</div>
+    <h1>Realce sua<br><em>beleza natural</em><br>com harmonia.</h1>
+    <p class="hero-sub">Técnicas avançadas, resultados discretos e sofisticados. Sua beleza, amplificada com segurança e naturalidade.</p>
+    <div class="hero-btns">
+      <a href="https://wa.me/5527992758222?text=Olá! Gostaria de agendar uma consulta." class="btn-primary" target="_blank">
+        💬 Agendar Consulta
+      </a>
+      <a href="#servicos" class="btn-outline">Ver Serviços</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">2.4<span>k</span></div>
+        <div class="stat-label">Pacientes atendidas</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">8<span>+</span></div>
+        <div class="stat-label">Anos de experiência</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">98<span>%</span></div>
+        <div class="stat-label">Satisfação</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-image">
+    <div class="hero-img-frame">
+      <div class="hero-img-placeholder">
+        <svg viewBox="0 0 200 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="100" cy="100" rx="55" ry="65" stroke="#B8975A" stroke-width="1.5"/>
+          <path d="M70 160 Q100 220 130 160" stroke="#B8975A" stroke-width="1.5" fill="none"/>
+          <circle cx="100" cy="40" r="18" stroke="#B8975A" stroke-width="1.5"/>
+          <path d="M82 100 Q100 115 118 100" stroke="#B8975A" stroke-width="1" fill="none"/>
+          <circle cx="82" cy="92" r="4" fill="#B8975A" opacity="0.5"/>
+          <circle cx="118" cy="92" r="4" fill="#B8975A" opacity="0.5"/>
+        </svg>
+      </div>
+      <div class="floating-badge">
+        <div class="badge-icon">✦</div>
+        <div class="badge-text">Resultado</div>
+        <div class="badge-val">100% Natural</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIAIS -->
+<section id="diferenciais">
+  <div class="section-tag">Por que nos escolher</div>
+  <h2 class="section-title">A excelência<br><em class="italic gold">em cada detalhe</em></h2>
+  <div class="diferenciais-grid">
+    <div class="diferencial-item reveal">
+      <div class="dif-num">01</div>
+      <div class="dif-icon">✦</div>
+      <div class="dif-title">Naturalidade acima de tudo</div>
+      <p class="dif-text">Resultados que realçam sua beleza sem transformar sua identidade. Nossa filosofia é a harmonia discreta e sofisticada.</p>
+    </div>
+    <div class="diferencial-item reveal">
+      <div class="dif-num">02</div>
+      <div class="dif-icon">🏅</div>
+      <div class="dif-title">Profissional certificado</div>
+      <p class="dif-text">Formação especializada em harmonização orofacial com certificações nacionais e internacionais reconhecidas.</p>
+    </div>
+    <div class="diferencial-item reveal">
+      <div class="dif-num">03</div>
+      <div class="dif-icon">🔬</div>
+      <div class="dif-title">Tecnologia de ponta</div>
+      <p class="dif-text">Utilizamos os insumos e equipamentos mais modernos do mercado para resultados seguros, precisos e duradouros.</p>
+    </div>
+    <div class="diferencial-item reveal">
+      <div class="dif-num">04</div>
+      <div class="dif-icon">🤍</div>
+      <div class="dif-title">Atendimento exclusivo</div>
+      <p class="dif-text">Cada consulta é única. Escutamos suas necessidades e criamos um plano personalizado para seus objetivos.</p>
+    </div>
+    <div class="diferencial-item reveal">
+      <div class="dif-num">05</div>
+      <div class="dif-icon">🛡️</div>
+      <div class="dif-title">Segurança garantida</div>
+      <p class="dif-text">Produtos originais, protocolos seguros e acompanhamento pós-procedimento para total tranquilidade.</p>
+    </div>
+    <div class="diferencial-item reveal">
+      <div class="dif-num">06</div>
+      <div class="dif-icon">✨</div>
+      <div class="dif-title">Ambiente sofisticado</div>
+      <p class="dif-text">Uma clínica projetada para oferecer conforto, privacidade e uma experiência premium desde o primeiro contato.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section id="servicos">
+  <div class="servicos-intro">
+    <div>
+      <div class="section-tag">Procedimentos</div>
+      <h2 class="section-title">Nossos<br><em class="italic">serviços</em></h2>
+    </div>
+    <div class="servicos-intro-right">
+      <p class="section-subtitle" style="text-align:right;">Técnicas minimamente invasivas com resultados expressivos. Cada procedimento pensado para revelar sua melhor versão.</p>
+    </div>
+  </div>
+  <div class="servicos-grid">
+    <div class="servico-card reveal" onclick="openModal('harmonizacao')">
+      <div class="servico-icon">◈</div>
+      <div class="servico-name">Harmonização<br>Facial</div>
+      <p class="servico-desc">Conjunto de procedimentos que equilibram as proporções do rosto, realçando traços naturais com elegância.</p>
+      <span class="servico-arrow">→</span>
+    </div>
+    <div class="servico-card reveal" onclick="openModal('botox')">
+      <div class="servico-icon">✦</div>
+      <div class="servico-name">Botox<br>Facial</div>
+      <p class="servico-desc">Suaviza linhas de expressão e rugas com precisão cirúrgica, preservando expressividade natural.</p>
+      <span class="servico-arrow">→</span>
+    </div>
+    <div class="servico-card reveal" onclick="openModal('preenchimento')">
+      <div class="servico-icon">◉</div>
+      <div class="servico-name">Preenchimento<br>Facial</div>
+      <p class="servico-desc">Restaura volume e contornos com ácido hialurônico para um resultado jovial e natural.</p>
+      <span class="servico-arrow">→</span>
+    </div>
+    <div class="servico-card reveal" onclick="openModal('labial')">
+      <div class="servico-icon">◇</div>
+      <div class="servico-name">Contorno<br>Labial</div>
+      <p class="servico-desc">Define e volumiza os lábios com técnica especializada para um resultado harmonioso e sedutor.</p>
+      <span class="servico-arrow">→</span>
+    </div>
+    <div class="servico-card reveal" onclick="openModal('skinbooster')">
+      <div class="servico-icon">●</div>
+      <div class="servico-name">Skinbooster<br>& Hidratação</div>
+      <p class="servico-desc">Hidratação profunda da pele com ácido hialurônico para luminosidade e vitalidade únicas.</p>
+      <span class="servico-arrow">→</span>
+    </div>
+    <div class="servico-card reveal" onclick="openModal('bioestimulador')">
+      <div class="servico-icon">⬡</div>
+      <div class="servico-name">Bioestimuladores<br>de Colágeno</div>
+      <p class="servico-desc">Estimula a produção natural de colágeno para firmeza e rejuvenescimento progressivo e duradouro.</p>
+      <span class="servico-arrow">→</span>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" style="padding:0;">
+  <div class="sobre-image">
+    <div class="sobre-img-placeholder">
+      <img
+        src="foto.doutora/luciana.p.jpeg"
+        alt="Dra. Luciana Pinheiro Monteiro"
+        loading="eager"
+        decoding="async"
+        fetchpriority="high"
+      >
+    </div>
+    <div class="sobre-overlay">
+      <p class="sobre-quote">"Beleza não é transformação. É revelar o que sempre esteve ali."</p>
+    </div>
+  </div>
+  <div class="sobre-content">
+    <div class="section-tag">Sobre a Clínica</div>
+    <h2 class="section-title">Dra. Luciana Pinheiro<br><em class="italic">Monteiro</em></h2>
+    <p style="margin-bottom:1.2rem;">Cirurgiã-dentista especialista em Harmonização facial com mais de 8 anos dedicados à arte de revelar a beleza natural de cada paciente.</p>
+    <p style="margin-bottom:2rem;">Minha filosofia é simples: cada rosto conta uma história única. Meu papel é realçar essa narrativa com técnica, sensibilidade e respeito à sua identidade.</p>
+    <div class="sobre-certs">
+      <span class="cert-badge">CFO 6276-ES</span>
+      <span class="cert-badge">Pós-grad. Harmonização Facial</span>
+      <span class="cert-badge">Procolo Full face</span>
+      <span class="cert-badge">Beleza com elegância</span>
+    </div>
+    <a href="#contato" class="btn-primary" style="align-self:flex-start; margin-top:1rem;">Conhecer a Clínica</a>
+  </div>
+</section>
+
+<!-- RESULTADOS -->
+<section id="resultados">
+  <div class="section-tag">Galeria</div>
+  <h2 class="section-title">Resultados<br><em class="italic" style="color:var(--gold-light);">reais</em></h2>
+  <p>Transformações autênticas. Cada resultado reflete nossa dedicação à naturalidade e à beleza individual.</p>
+  <div class="resultados-grid">
+    <div class="resultado-card reveal">
+      <div class="resultado-placeholder">
+        <img src="antes.depois/modelo0.jpeg" alt="Antes e depois do procedimento de harmonizacao facial" class="resultado-img" loading="lazy" decoding="async">
+        <span class="antes-depois-label antes">Antes</span>
+        <span class="antes-depois-label depois">Depois</span>
+      </div>
+      <div class="resultado-label">
+        <div class="resultado-proc">Harmonização Facial</div>
+        <div class="resultado-info">Preenchimento + Botox · 45 dias</div>
+      </div>
+    </div>
+    <div class="resultado-card reveal">
+      <div class="resultado-placeholder">
+        <img src="antes.depois/modelo1.jpeg" alt="Antes e depois do procedimento labial" class="resultado-img" loading="lazy" decoding="async">
+        <span class="antes-depois-label antes">Antes</span>
+        <span class="antes-depois-label depois">Depois</span>
+      </div>
+      <div class="resultado-label">
+        <div class="resultado-proc">Lábios com Contorno</div>
+        <div class="resultado-info">Ácido hialurônico · 30 dias</div>
+      </div>
+    </div>
+    <div class="resultado-card reveal">
+      <div class="resultado-placeholder">
+        <img src="antes.depois/modelo2.jpeg" alt="Antes e depois do procedimento bioestimulador" class="resultado-img" loading="lazy" decoding="async">
+        <span class="antes-depois-label antes">Antes</span>
+        <span class="antes-depois-label depois">Depois</span>
+      </div>
+      <div class="resultado-label">
+        <div class="resultado-proc">Bioestimulador</div>
+        <div class="resultado-info">Sculptra · 90 dias</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section id="depoimentos">
+  <div class="section-tag">Depoimentos</div>
+  <h2 class="section-title">O que nossas<br><em class="italic">pacientes dizem</em></h2>
+  <div class="depoimentos-grid">
+    <div class="depoimento-card reveal">
+      <div class="dep-quote-mark">"</div>
+      <div class="dep-stars">★★★★★</div>
+      <p class="dep-text">Me olhei no espelho pela primeira vez em anos e me reconheci. A Dra. Sofia entendeu exatamente o que eu precisava.</p>
+      <div class="dep-author">
+        <div class="dep-avatar">A</div>
+        <div>
+          <div class="dep-name">Ana Carolina M.</div>
+          <div class="dep-proc">Harmonização Facial</div>
+        </div>
+      </div>
+    </div>
+    <div class="depoimento-card reveal">
+      <div class="dep-quote-mark">"</div>
+      <div class="dep-stars">★★★★★</div>
+      <p class="dep-text">Resultado incrivelmente natural. Meu marido notou que eu estava diferente, mas não sabia o quê. Esse é o segredo!</p>
+      <div class="dep-author">
+        <div class="dep-avatar">J</div>
+        <div>
+          <div class="dep-name">Juliana F.</div>
+          <div class="dep-proc">Botox + Skinbooster</div>
+        </div>
+      </div>
+    </div>
+    <div class="depoimento-card reveal">
+      <div class="dep-quote-mark">"</div>
+      <div class="dep-stars">★★★★★</div>
+      <p class="dep-text">A clínica é linda, o atendimento é impecável e o resultado superou todas as minhas expectativas. Me sinto 10 anos mais jovem.</p>
+      <div class="dep-author">
+        <div class="dep-avatar">M</div>
+        <div>
+          <div class="dep-name">Mariana P.</div>
+          <div class="dep-proc">Preenchimento Facial</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog">
+  <div class="section-tag">Blog & Conteúdo</div>
+  <h2 class="section-title">Informação que<br><em class="italic">transforma</em></h2>
+  <div class="blog-grid">
+    <div class="blog-card reveal">
+      <div class="blog-img">💉</div>
+      <div class="blog-content">
+        <div class="blog-cat">Botox</div>
+        <div class="blog-title">Quanto tempo dura o Botox? Tudo o que você precisa saber</div>
+        <p class="blog-excerpt">Entenda a duração, fatores que influenciam e quando agendar a sua aplicação de reforço.</p>
+        <a href="#" class="blog-link">Ler artigo →</a>
+      </div>
+    </div>
+    <div class="blog-card reveal">
+      <div class="blog-img">✨</div>
+      <div class="blog-content">
+        <div class="blog-cat">Segurança</div>
+        <div class="blog-title">Preenchimento facial é seguro? Mitos e verdades</div>
+        <p class="blog-excerpt">Desmistificamos os principais medos e apresentamos a ciência por trás do procedimento.</p>
+        <a href="#" class="blog-link">Ler artigo →</a>
+      </div>
+    </div>
+    <div class="blog-card reveal">
+      <div class="blog-img">◈</div>
+      <div class="blog-content">
+        <div class="blog-cat">Harmonização</div>
+        <div class="blog-title">O que é harmonização facial e como funciona?</div>
+        <p class="blog-excerpt">Um guia completo sobre o procedimento mais procurado da estética orofacial moderna.</p>
+        <a href="#" class="blog-link">Ler artigo →</a>
+      </div>
+    </div>
+    <div class="blog-card reveal">
+      <div class="blog-img">💎</div>
+      <div class="blog-content">
+        <div class="blog-cat">Investimento</div>
+        <div class="blog-title">Quanto custa a harmonização facial? Entenda os valores</div>
+        <p class="blog-excerpt">Transparência sobre investimento, o que está incluso e por que a qualidade faz diferença.</p>
+        <a href="#" class="blog-link">Ler artigo →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato">
+  <div class="section-tag">Contato</div>
+  <h2 class="section-title">Agende sua<br><em class="italic" style="color:var(--gold-light);">consulta</em></h2>
+  <p>Dê o primeiro passo. Nossa equipe responde em até 2 horas.</p>
+  <div class="contato-grid">
+    <div class="contato-info">
+      <div class="info-item">
+        <div class="info-icon">📍</div>
+        <div>
+          <div class="info-label">Endereço</div>
+          <div class="info-value">Rua Argentino Fonseca, 239</div>
+          <div class="info-sub">Itapemirim - ES, 29330-000</div>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">📱</div>
+        <div>
+          <div class="info-label">WhatsApp</div>
+          <div class="info-value">(27) 9 99275-8222</div>
+          <div class="info-sub">Resposta rápida · Seg a Sex</div>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">🕐</div>
+        <div>
+          <div class="info-label">Horários</div>
+          <div class="info-value">Seg – Sex: 8h às 19h</div>
+          <div class="info-sub">Sábados: 8h às 14h (com agendamento)</div>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">📷</div>
+        <div>
+          <div class="info-label">Instagram</div>
+          <div class="info-value">@dra.lucianapinheiro</div>
+          <div class="info-sub">Acompanhe resultados e novidades</div>
+        </div>
+      </div>
+      <div class="social-links">
+        <a href="#" class="social-link" title="Instagram">📸</a>
+        <a href="#" class="social-link" title="WhatsApp">💬</a>
+        <a href="#" class="social-link" title="YouTube">▶</a>
+        <a href="#" class="social-link" title="TikTok">♪</a>
+      </div>
+    </div>
+    <div class="contato-form">
+      <div class="form-group">
+        <label>Nome completo</label>
+        <input type="text" placeholder="Seu nome">
+      </div>
+      <div class="form-group">
+        <label>WhatsApp</label>
+        <input type="tel" placeholder="(27) 9 0000-0000">
+      </div>
+      <div class="form-group">
+        <label>Serviço de interesse</label>
+        <select>
+          <option value="">Selecione um procedimento</option>
+          <option>Harmonização Facial</option>
+          <option>Botox Facial</option>
+          <option>Preenchimento Facial</option>
+          <option>Contorno Labial</option>
+          <option>Skinbooster</option>
+          <option>Bioestimuladores de Colágeno</option>
+          <option>Não sei — quero uma avaliação</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Mensagem (opcional)</label>
+        <textarea placeholder="Conte-nos mais sobre seus objetivos..."></textarea>
+      </div>
+      <button class="btn-primary" style="width:100%;justify-content:center;" onclick="submitForm()">
+        Solicitar Agendamento →
+      </button>
+      <p style="font-size:0.75rem;text-align:center;margin-top:1rem;color:rgba(255,255,255,0.3);">
+        Seus dados são protegidos e nunca compartilhados.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Luciana <span>Pinheiro</span></div>
+  <div class="footer-links">
+    <a href="#home">Início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#resultados">Resultados</a>
+    <a href="#contato">Contato</a>
+    <a href="#">Política de Privacidade</a>
+  </div>
+  <div class="footer-copy">© 2026 Luciana Pinheiro. Todos os direitos reservados.</div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<div class="whatsapp-float">
+  <div class="whatsapp-tooltip">Seguir no Instagram</div>
+  <a href="https://instagram.com/dra.lucianapinheiro" class="instagram-btn" target="_blank" rel="noopener" title="Instagram @dra.lucianapinheiro">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4c0 3.2-2.6 5.8-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8C2 4.6 4.6 2 7.8 2m-.2 2A3.6 3.6 0 004 7.6v8.8A3.6 3.6 0 007.6 20h8.8a3.6 3.6 0 003.6-3.6V7.6A3.6 3.6 0 0016.4 4H7.6m9.65 1.5a1.35 1.35 0 110 2.7 1.35 1.35 0 010-2.7M12 7a5 5 0 110 10 5 5 0 010-10m0 2a3 3 0 100 6 3 3 0 000-6z"/>
+    </svg>
+  </a>
+  <div class="whatsapp-tooltip">Agendar pelo WhatsApp</div>
+  <a href="https://wa.me/55279992758222?text=Olá! Vi o site e gostaria de agendar uma consulta." class="whatsapp-btn" target="_blank" rel="noopener">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+</div>
+
+<!-- MODAIS SERVIÇOS -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+  <div class="modal" id="modalContent">
+    <div class="modal-header">
+      <div class="modal-tag" id="modalTag"></div>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <button class="modal-close" onclick="closeModalDirect()">✕</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<script>
+// NAV SCROLL
+window.addEventListener('scroll', () => {
+  document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// HAMBURGER
+function toggleMenu() {
+  document.getElementById('navLinks').classList.toggle('open');
+}
+
+// REVEAL ON SCROLL
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i * 80);
+    }
+  });
+}, { threshold: 0.1 });
+reveals.forEach(el => observer.observe(el));
+
+// MODAL DATA
+const services = {
+  harmonizacao: {
+    tag: 'Procedimento Premium',
+    title: 'Harmonização Facial',
+    desc: 'A harmonização facial é um conjunto de procedimentos minimamente invasivos que equilibram as proporções do rosto, realçando os traços naturais de cada paciente. Combinamos diferentes técnicas para criar um resultado global, harmonioso e sofisticado.',
+    benefits: ['Proporções equilibradas', 'Resultado imediato', 'Sem cirurgia', 'Rápida recuperação', 'Naturalidade garantida', 'Personalizado'],
+    indicacoes: 'Ideal para pacientes que desejam suavizar assimetrias faciais, restaurar volume perdido com o tempo, definir contornos e rejuvenescer a aparência sem recorrer a procedimentos cirúrgicos.',
+    resultados: 'Resultados visíveis imediatamente após o procedimento, com evolução progressiva nos primeiros 15 dias. Durabilidade entre 12 e 18 meses dependendo dos procedimentos realizados.',
+    faqs: [
+      { q: 'Dói muito?', a: 'Utilizamos anestésicos tópicos e locais para máximo conforto. A maioria das pacientes relata apenas leve desconforto.' },
+      { q: 'Preciso de mais de uma sessão?', a: 'Geralmente uma sessão já traz excelentes resultados. Em casos mais complexos, pode ser indicado retorno para ajustes.' },
+      { q: 'Posso trabalhar após o procedimento?', a: 'Sim! A maioria retorna às atividades no mesmo dia. Recomendamos evitar exercícios intensos por 24-48h.' }
+    ]
+  },
+  botox: {
+    tag: 'Toxina Botulínica',
+    title: 'Botox Facial',
+    desc: 'A toxina botulínica é o procedimento estético mais aplicado do mundo. Atua relaxando músculos específicos, suavizando linhas de expressão e prevenindo o surgimento de novas rugas — tudo preservando sua expressividade e naturalidade.',
+    benefits: ['Suaviza rugas', 'Preventivo', 'Sem downtime', 'Efeito natural', 'Rápida aplicação', '15-30 minutos'],
+    indicacoes: 'Indicado para linhas de expressão na testa, entre sobrancelhas (glabela), ao redor dos olhos (pés de galinha), pescoço (linhas de platisma) e para lifting não cirúrgico das sobrancelhas.',
+    resultados: 'Os resultados surgem entre 5 e 14 dias após a aplicação e duram em média 4 a 6 meses. Com aplicações regulares, o efeito pode durar cada vez mais.',
+    faqs: [
+      { q: 'Quanto tempo dura o botox?', a: 'Em média 4 a 6 meses. Com manutenções regulares, o músculo relaxa progressivamente e o intervalo entre as sessões pode aumentar.' },
+      { q: 'O resultado fica artificial?', a: 'Não, quando aplicado corretamente. Nossa abordagem preserva total expressividade com suavização natural das marcas.' },
+      { q: 'A partir de que idade posso fazer?', a: 'Não existe idade mínima definida. Utilizamos de forma preventiva a partir dos 25-28 anos e corretiva em qualquer faixa etária.' }
+    ]
+  },
+  preenchimento: {
+    tag: 'Ácido Hialurônico',
+    title: 'Preenchimento Facial',
+    desc: 'O preenchimento com ácido hialurônico repõe volume perdido, suaviza sulcos profundos e define contornos faciais com extrema naturalidade. O ácido hialurônico é uma substância naturalmente presente no organismo, garantindo segurança e compatibilidade.',
+    benefits: ['Volume imediato', 'Rejuvenescimento', 'Define contornos', 'Reverte se necessário', 'Hidratação profunda', 'Biocompatível'],
+    indicacoes: 'Sulco nasolabial, bigode chinês, maçãs do rosto, queixo, mandíbula, olheiras e reposição de volume nas bochechas. Ideal para rejuvenescimento e definição facial.',
+    resultados: 'Resultados imediatos com melhora progressiva nas primeiras 2 semanas. Durabilidade de 12 a 24 meses dependendo da área tratada e produto utilizado.',
+    faqs: [
+      { q: 'O preenchimento é reversível?', a: 'Sim! O ácido hialurônico pode ser dissolvido com hialuronidase em qualquer momento, trazendo segurança total ao procedimento.' },
+      { q: 'Vai ficar inchado?', a: 'Um leve inchaço inicial pode ocorrer por 24-72h, especialmente em lábios e olheiras. É temporário e faz parte do processo.' },
+      { q: 'Qual é a diferença entre os fios de preenchimento?', a: 'Os produtos diferem em densidade, elasticidade e indicação. Selecionamos o mais adequado para cada área e objetivo.' }
+    ]
+  },
+  labial: {
+    tag: 'Design Labial',
+    title: 'Contorno Labial',
+    desc: 'O contorno e volumização labial é uma arte que exige técnica apurada e olhar estético refinado. Aumentamos, definimos e harmonizamos os lábios respeitando as proporções do seu rosto para um resultado sedutor e completamente natural.',
+    benefits: ['Volume harmonioso', 'Contorno definido', 'Hidratação', 'Simetria', 'Natural', 'Personalizado'],
+    indicacoes: 'Para quem deseja volumizar lábios finos, definir o contorno desbotado, corrigir assimetrias, revirar levemente o lábio superior (lip flip) ou simplesmente hidratar e realçar.',
+    resultados: 'Resultado imediato com leve edema inicial. O resultado definitivo aparece após 7-14 dias. Durabilidade de 6 a 12 meses.',
+    faqs: [
+      { q: 'Vai ficar um "bico de pato"?', a: 'Absolutamente não, quando feito corretamente. Nosso foco é respeitar suas proporções e entregar naturalidade total.' },
+      { q: 'Como é a recuperação?', a: 'Inchaço por 24-72h é normal. Evite beijos, esfoliantes labiais e exposição ao sol por uma semana.' },
+      { q: 'Posso amamentar?', a: 'Não recomendamos procedimentos estéticos durante a amamentação. Agende para após o período.' }
+    ]
+  },
+  skinbooster: {
+    tag: 'Hidratação Profunda',
+    title: 'Skinbooster',
+    desc: 'O Skinbooster é um tratamento de hidratação profunda da pele com micro-injeções de ácido hialurônico de baixa densidade. O resultado é uma pele visivelmente mais luminosa, hidratada, firme e com textura uniformizada.',
+    benefits: ['Hidratação profunda', 'Luminosidade', 'Textura uniforme', 'Firmeza', 'Antienvelhecimento', 'Brilho natural'],
+    indicacoes: 'Pele desidratada, apagada ou sem viço. Perfeito para qualquer faixa etária que deseja melhorar a qualidade geral da pele, especialmente rosto, pescoço, colo e mãos.',
+    resultados: 'Melhora progressiva após cada sessão. Protocolo geralmente de 3 sessões com intervalo de 4 semanas. Resultados duram de 6 a 12 meses.',
+    faqs: [
+      { q: 'Quantas sessões são necessárias?', a: 'O protocolo padrão é de 3 sessões mensais para resultados completos, com manutenção a cada 6-12 meses.' },
+      { q: 'Posso fazer antes de um evento?', a: 'Recomendamos fazer pelo menos 7 dias antes de eventos importantes para garantir resolução total do inchaço.' },
+      { q: 'Tem diferença do preenchimento?', a: 'Sim. O Skinbooster hidrata e melhora a qualidade da pele. Não aumenta volume nem define contornos como o preenchimento clássico.' }
+    ]
+  },
+  bioestimulador: {
+    tag: 'Regeneração Natural',
+    title: 'Bioestimuladores de Colágeno',
+    desc: 'Os bioestimuladores de colágeno são substâncias que, ao serem injetadas na pele, estimulam os fibroblastos a produzirem colágeno naturalmente. O resultado é um rejuvenescimento progressivo, com pele mais firme, elástica e jovial.',
+    benefits: ['Firma a pele', 'Estimula colágeno', 'Progressivo', 'Longa duração', 'Aspecto natural', 'Lift não cirúrgico'],
+    indicacoes: 'Perda de firmeza e elasticidade, flacidez moderada, queda das bochechas, sulcos profundos. Indicado principalmente para pacientes a partir de 35-40 anos.',
+    resultados: 'Resultados aparecem gradualmente de 4 a 6 meses após o procedimento. Podem durar de 2 a 5 anos dependendo do produto utilizado e resposta individual.',
+    faqs: [
+      { q: 'Quais produtos são utilizados?', a: 'Trabalhamos com os principais bioestimuladores do mercado: Sculptra (PLLA), Radiesse (CaHA) e Ellansé (PCL), escolhidos individualmente.' },
+      { q: 'O resultado é gradual mesmo?', a: 'Sim. A beleza deste tratamento está exatamente nisso: a transformação acontece naturalmente, sem que ninguém perceba o "momento" da mudança.' },
+      { q: 'Posso combinar com outros procedimentos?', a: 'Absolutamente. É excelente combinado com botox e preenchimentos em um protocolo de harmonização completo.' }
+    ]
+  }
+};
+
+function openModal(key) {
+  const s = services[key];
+  document.getElementById('modalTag').textContent = s.tag;
+  document.getElementById('modalTitle').textContent = s.title;
+  document.getElementById('modalBody').innerHTML = `
+    <div class="modal-section">
+      <h4>Sobre o Procedimento</h4>
+      <p>${s.desc}</p>
+    </div>
+    <div class="modal-section">
+      <h4>Benefícios</h4>
+      <ul class="modal-benefits">${s.benefits.map(b => `<li>${b}</li>`).join('')}</ul>
+    </div>
+    <div class="modal-section">
+      <h4>Indicações</h4>
+      <p>${s.indicacoes}</p>
+    </div>
+    <div class="modal-section">
+      <h4>Resultados Esperados</h4>
+      <p>${s.resultados}</p>
+    </div>
+    <div class="modal-section">
+      <h4>Perguntas Frequentes</h4>
+      ${s.faqs.map((f, i) => `
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(${i})">${f.q} <span>+</span></div>
+          <div class="faq-a" id="faq-${i}">${f.a}</div>
+        </div>
+      `).join('')}
+    </div>
+    <div class="modal-cta">
+      <a href="https://wa.me/5528992758222?text=Olá! Tenho interesse em ${encodeURIComponent(s.title)}. Gostaria de agendar uma consulta." class="btn-primary" target="_blank" style="display:inline-flex;justify-content:center;">
+        💬 Agendar ${s.title}
+      </a>
+    </div>
+  `;
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function toggleFaq(i) {
+  const el = document.getElementById(`faq-${i}`);
+  el.classList.toggle('open');
+}
+
+function closeModal(e) {
+  if (e.target === document.getElementById('modalOverlay')) closeModalDirect();
+}
+function closeModalDirect() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// FORM SUBMIT
+function submitForm() {
+  const name = document.querySelector('input[type="text"]').value;
+  const phone = document.querySelector('input[type="tel"]').value;
+  const service = document.querySelector('select').value;
+  if (!name || !phone) { alert('Por favor, preencha nome e WhatsApp.'); return; }
+  const msg = `Olá! Me chamo ${name}. Vi o site e gostaria de agendar uma consulta${service ? ' para ' + service : ''}. Meu WhatsApp é ${phone}.`;
+  window.open(`https://wa.me/5528992758222?text=${encodeURIComponent(msg)}`, '_blank');
+}
+
+// SMOOTH SCROLL FOR NAV
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const href = a.getAttribute('href');
+    if (href === '#') return;
+    e.preventDefault();
+    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('navLinks').classList.remove('open');
+  });
+});
+</script>
+</body>
+</html>
